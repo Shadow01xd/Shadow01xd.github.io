@@ -1,0 +1,68 @@
+/*
+ * Inventario: un solo panel enmarcado. Cada área es una fila con su etiqueta
+ * a la izquierda y las herramientas como casillas a la derecha.
+ */
+.inventory {
+  border: var(--border) solid var(--line-strong);
+  background: var(--glass-2);
+}
+
+.inventory-row {
+  --accent: var(--cyan);
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 16px 24px;
+  align-items: start;
+  padding: 20px 24px;
+}
+.inventory-row + .inventory-row { border-top: 2px dashed var(--line); }
+
+.inventory-row:nth-child(4n + 1) { --accent: var(--coin); }
+.inventory-row:nth-child(4n + 2) { --accent: var(--cyan); }
+.inventory-row:nth-child(4n + 3) { --accent: var(--pink); }
+.inventory-row:nth-child(4n + 4) { --accent: var(--lime); }
+
+.inventory-label {
+  padding-top: 10px;
+  color: var(--accent);
+  font: 400 18px/1.1 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.inventory-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Casilla del inventario */
+.slot {
+  display: grid;
+  place-items: center;
+  min-width: 64px;
+  min-height: 40px;
+  padding: 8px 12px;
+  background: var(--glass);
+  box-shadow: inset 0 0 0 2px var(--line-strong);
+  clip-path: var(--pixel-corners);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* Lo que estoy aprendiendo: casillas aún sin desbloquear */
+.inventory-row[data-group="learning"] .slot {
+  background: transparent;
+  box-shadow: none;
+  outline: 2px dashed var(--line-strong);
+  outline-offset: -2px;
+  clip-path: none;
+  color: var(--ink-2);
+}
+
+@media (max-width: 720px) {
+  .inventory-row { grid-template-columns: 1fr; gap: 12px; padding: 18px 16px; }
+  .inventory-label { padding-top: 0; }
+}

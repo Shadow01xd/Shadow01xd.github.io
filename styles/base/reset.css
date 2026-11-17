@@ -1,0 +1,8 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+h1, h2, h3, h4, p, ul, dl, dd, figure, table { margin: 0; }
+ul { padding: 0; list-style: none; }
+table { border-collapse: collapse; }
+button { font: inherit; color: inherit; }
+img, svg { display: block; }
+a { color: inherit; }

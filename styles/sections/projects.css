@@ -1,0 +1,189 @@
+/* ── Selección de niveles ───────────────────────────────────────────── */
+.stages {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  padding: 0 0 16px;
+  border: var(--border) solid var(--line);
+  background: var(--glass-2);
+  color: var(--ink);
+  text-align: left;
+  clip-path: var(--pixel-corners);
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--steps-fast), background-color var(--dur-fast) var(--steps-fast);
+}
+
+/* La marquesina: banda de color con el nombre, apagada hasta que se elige */
+.stage-name {
+  padding: 12px 14px 10px;
+  background: color-mix(in srgb, var(--stage) 14%, var(--glass-2));
+  color: var(--stage);
+  font: 400 19px/1.1 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  overflow-wrap: anywhere;
+  transition: background-color var(--dur-fast) var(--steps-fast), color var(--dur-fast) var(--steps-fast);
+}
+
+.stage-score {
+  padding: 14px 14px 0;
+  font: 400 36px/1 var(--font-pixel);
+  font-variant-numeric: tabular-nums;
+}
+
+.stage-unit {
+  padding: 6px 14px 0;
+  color: var(--stage);
+  font: 400 13px/1.2 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stage-tag {
+  padding: 8px 14px 0;
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.stage-cursor {
+  position: absolute;
+  right: 14px;
+  bottom: 16px;
+  width: 10px;
+  height: 18px;
+  color: var(--stage);
+  visibility: hidden;
+}
+
+.stage:hover { border-color: var(--line-strong); background: var(--glass-3); }
+
+.stage[aria-selected="true"] {
+  border-color: var(--stage);
+  background: var(--glass-3);
+}
+.stage[aria-selected="true"] .stage-name {
+  background: var(--stage);
+  color: var(--glass);
+}
+.stage[aria-selected="true"] .stage-cursor {
+  visibility: visible;
+  animation: blink 0.9s steps(1, end) infinite;
+}
+
+.stage-hint {
+  margin-top: 12px;
+  color: var(--ink-3);
+  font: 400 14px/1.3 var(--font-pixel);
+  letter-spacing: 0.04em;
+}
+
+/* ── Panel del nivel ───────────────────────────────────────────────── */
+.level {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 48px;
+  margin-top: 28px;
+  padding: 48px;
+  border: var(--border) solid var(--stage);
+  background: var(--glass-2);
+  clip-path: var(--pixel-corners);
+}
+
+.level > * { position: relative; z-index: 3; }
+
+.level-name {
+  color: var(--stage);
+  font: 400 clamp(2.25rem, 5vw, 3.75rem)/1 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-shadow: 0.06em 0.06em 0 color-mix(in srgb, var(--stage) 30%, var(--glass)), var(--bloom);
+  overflow-wrap: anywhere;
+}
+
+.level-tag {
+  margin-top: 16px;
+  max-width: 22em;
+  color: var(--ink);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+
+.level-score {
+  display: grid;
+  gap: 8px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 2px dashed var(--line-strong);
+}
+
+.level-score-label {
+  color: var(--stage);
+  font: 400 14px/1 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.level-score-value {
+  color: var(--ink);
+  font: 400 clamp(4rem, 9vw, 6rem)/0.9 var(--font-pixel);
+  font-variant-numeric: tabular-nums;
+  text-shadow: var(--bloom);
+}
+
+.level-score-caption { max-width: 24em; color: var(--ink-2); font-size: 16px; }
+
+.level-details { display: grid; gap: 16px; align-content: start; }
+
+.level-points {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+}
+.level-points li {
+  position: relative;
+  padding-left: 20px;
+}
+.level-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  background: var(--stage);
+}
+
+.level-details .button { justify-self: start; margin-top: 8px; }
+
+.level-private {
+  margin-top: 8px;
+  color: var(--ink-3);
+  font: 400 15px/1.3 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* La pista de teclado solo tiene sentido con teclado y ratón */
+@media (hover: none) { .stage-hint { display: none; } }
+
+@media (max-width: 960px) {
+  .stages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .level { grid-template-columns: 1fr; gap: 32px; padding: 36px 28px; }
+}
+
+@media (max-width: 520px) {
+  .stage-name { font-size: 16px; padding: 10px 12px 8px; }
+  .stage-score { font-size: 28px; padding: 12px 12px 0; }
+  .stage-tag { display: none; }
+  .level { padding: 28px 18px; }
+  .dialog { padding: 18px 16px; }
+}

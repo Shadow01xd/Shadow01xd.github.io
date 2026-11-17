@@ -1,0 +1,26 @@
+/*
+ * Caja de diálogo de juego: doble marco (línea, hueco, línea) y título en
+ * píxel con el color del contexto (--stage o --accent).
+ */
+.dialog {
+  --accent: var(--stage, var(--cyan));
+  padding: 20px 22px 22px;
+  background: var(--glass);
+  border: var(--border) solid var(--line-strong);
+  box-shadow: inset 0 0 0 var(--border) var(--glass), inset 0 0 0 calc(var(--border) + 1px) var(--line);
+}
+
+.dialog-title {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font: 400 14px/1.2 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.dialog p,
+.dialog li {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}

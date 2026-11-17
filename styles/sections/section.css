@@ -1,0 +1,34 @@
+/* Estructura común de las secciones de contenido. */
+.section { padding-top: 120px; }
+
+.section-head { margin-bottom: 40px; }
+
+.section-title {
+  color: var(--ink);
+  font: 400 clamp(2.25rem, 6vw, 4rem)/1 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-shadow: 0.06em 0.06em 0 var(--line-strong);
+  text-wrap: balance;
+}
+
+.section-sub {
+  margin-top: 14px;
+  max-width: 40em;
+  color: var(--ink-2);
+  font-size: 20px;
+}
+
+.subsection-title {
+  margin: 56px 0 20px;
+  color: var(--ink);
+  font: 400 24px/1.1 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 720px) {
+  .section { padding-top: 88px; }
+  .section-head { margin-bottom: 28px; }
+  .section-sub { font-size: 18px; }
+}

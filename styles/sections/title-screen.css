@@ -1,0 +1,99 @@
+/* Pantalla de título: ocupa la primera vista completa. */
+.title-screen {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: calc(100svh - var(--topbar-h) - var(--border));
+  overflow: hidden;
+  border-bottom: var(--border) solid var(--line);
+}
+
+/* Marcador superior, como el de una máquina */
+.hud {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+.hud-item { display: grid; gap: 4px; font-family: var(--font-pixel); text-transform: uppercase; }
+.hud-item-end { text-align: right; }
+.hud-label { color: var(--pink); font-size: 14px; letter-spacing: 0.08em; }
+.hud-value { color: var(--ink); font-size: 18px; letter-spacing: 0.06em; }
+
+.title-inner {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  padding-block: 48px 72px;
+  text-align: center;
+}
+
+.title-name {
+  display: grid;
+  color: var(--coin);
+  font: 400 clamp(2.75rem, 10vw, 6rem)/0.95 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-shadow: 0.06em 0.06em 0 var(--pink), var(--bloom);
+}
+
+.title-role {
+  margin-top: 28px;
+  color: var(--cyan);
+  font: 400 clamp(1.05rem, 2.4vw, 1.6rem)/1.2 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-wrap: balance;
+}
+
+.title-meta {
+  margin-top: 16px;
+  max-width: 36em;
+  color: var(--ink-2);
+  font-size: 19px;
+  text-wrap: pretty;
+}
+
+.press-start {
+  margin-top: 44px;
+  color: var(--ink);
+  font: 400 18px/1 var(--font-pixel);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  animation: blink 1.1s steps(1, end) infinite;
+}
+
+.title-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 24px;
+  margin-top: 20px;
+}
+
+/* Estrellas de fondo: cuadros de 4px que titilan por pasos */
+.stars { position: absolute; inset: 0; z-index: 1; }
+.stars i {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--px);
+  height: var(--px);
+  background: var(--ink-3);
+  animation: twinkle 3.2s steps(2, end) var(--d) infinite;
+}
+.stars i:nth-child(3n) { background: var(--cyan); }
+.stars i:nth-child(4n) { background: var(--coin); }
+
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes twinkle { 50% { opacity: 0.15; } }
+
+@media (max-width: 720px) {
+  .hud { padding-top: 16px; }
+  .hud-value { font-size: 15px; }
+  .title-inner { padding-block: 32px 56px; }
+  .title-meta { font-size: 17px; }
+  .press-start { margin-top: 32px; }
+}

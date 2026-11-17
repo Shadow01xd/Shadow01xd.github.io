@@ -1,0 +1,37 @@
+/* ── Aparición al hacer scroll: visible por defecto; JS solo oculta lo que
+   sigue bajo el borde (.is-pending) cuando puede animarlo. ─────────────── */
+.reveal {
+  transition:
+    opacity var(--dur-reveal) var(--steps-wipe),
+    transform var(--dur-reveal) var(--steps-wipe);
+}
+.reveal.is-pending { opacity: 0; transform: translateY(16px); }
+
+/* ── Cortinilla por pasos al cambiar de nivel ──────────────────────────── */
+.level.is-entering > * { animation: wipe-in var(--dur-wipe) var(--steps-wipe) both; }
+.level.is-entering > :nth-child(2) { animation-delay: 60ms; }
+
+@keyframes wipe-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+/* ── Estela de píxeles del puntero (la crea pixel-trail.js) ───────────── */
+.pixel-trail {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal.is-pending { opacity: 1; transform: none; }
+}

@@ -4,31 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Miguel Ángel Hernández · Ingeniero de software en formación</title>
-  <meta name="description" content="Portafolio de Miguel Ángel Hernández Hernández (Shadow01xd): estudiante de cuarto año de Ingeniería en Desarrollo de Software en la Universidad de Oriente (UNIVO) y desarrollador full stack.">
+  <meta name="description" data-i18n-attr="content:meta.description" content="Portafolio de Miguel Ángel Hernández Hernández (Shadow01xd): estudiante de cuarto año de Ingeniería en Desarrollo de Software en la Universidad de Oriente (UNIVO) y desarrollador full stack.">
   <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#07060b">
   <meta property="og:title" content="Miguel Ángel Hernández · Ingeniero de software en formación">
   <meta property="og:description" content="Cuarto año de Ingeniería en Desarrollo de Software, UNIVO. Web, móvil y machine learning.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Tiny5&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="src/main.js"></script>
 </head>
 <body>
+  <!-- Iconos de píxel reutilizables (se usan con <svg><use href="#i-…"></svg>). -->
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="i-pixel-arrow" viewBox="0 0 5 9"><path d="M0 0h1v9H0zM1 1h1v7H1zM2 2h1v5H2zM3 3h1v3H3zM4 4h1v1H4z"/></symbol>
+  </svg>
+
   <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
 
   <header class="topbar">
-    <nav class="nav wrap" aria-label="Principal">
-      <a class="brand" href="#top">Miguel Ángel Hernández</a>
+    <nav class="topbar-inner wrap" data-i18n-attr="aria-label:nav.label" aria-label="Principal">
+      <a class="brand" href="#top" aria-label="Miguel Ángel Hernández">MAH</a>
       <ul class="nav-links">
         <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
         <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
         <li><a href="#herramientas" data-i18n="nav.tools">Herramientas</a></li>
         <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
       </ul>
-      <div class="lang" role="group" aria-label="Idioma / Language">
+      <div class="lang" role="group" data-i18n-attr="aria-label:lang.label" aria-label="Idioma">
         <button type="button" data-lang="es" aria-pressed="true">ES</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
@@ -36,52 +42,106 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top">
-      <div class="wrap hero-inner">
-        <h1 class="hero-name">Miguel Ángel Hernández</h1>
-        <p class="hero-sub" data-i18n="hero.sub">Ingeniero de software en formación.</p>
-        <p class="hero-meta" data-i18n="hero.meta">Estudiante de cuarto año de Ingeniería en Desarrollo de Software en la Universidad de Oriente (UNIVO). Construyo aplicaciones web, móviles y de machine learning de punta a punta.</p>
-        <div class="hero-actions">
-          <a class="pill" href="#contacto" data-i18n="hero.cta">Escríbeme</a>
-          <a class="more" href="#proyectos"><span data-i18n="hero.projects">Ver proyectos</span><svg class="chev" viewBox="0 0 8 14" aria-hidden="true"><path d="M1.5 1.5 6.5 7l-5 5.5"/></svg></a>
+    <!-- Pantalla de título -->
+    <section class="title-screen crt" id="top" aria-labelledby="hero-name">
+      <div class="stars" aria-hidden="true">
+        <i style="--x:8%;--y:14%;--d:0s"></i><i style="--x:21%;--y:72%;--d:1.2s"></i>
+        <i style="--x:34%;--y:9%;--d:.6s"></i><i style="--x:47%;--y:86%;--d:2.1s"></i>
+        <i style="--x:63%;--y:12%;--d:1.6s"></i><i style="--x:76%;--y:78%;--d:.3s"></i>
+        <i style="--x:88%;--y:22%;--d:2.4s"></i><i style="--x:93%;--y:61%;--d:.9s"></i>
+        <i style="--x:5%;--y:52%;--d:1.9s"></i><i style="--x:56%;--y:68%;--d:2.8s"></i>
+      </div>
+
+      <div class="hud wrap" aria-hidden="true">
+        <p class="hud-item"><span class="hud-label" data-i18n="hud.player">Jugador 1</span><span class="hud-value">SHADOW01XD</span></p>
+        <p class="hud-item hud-item-end"><span class="hud-label" data-i18n="hud.stages">Niveles</span><span class="hud-value" id="stage-count">04</span></p>
+      </div>
+
+      <div class="title-inner wrap">
+        <h1 class="title-name" id="hero-name">
+          <span class="title-line">Miguel Ángel</span>
+          <span class="title-line">Hernández</span>
+        </h1>
+        <p class="title-role" data-i18n="hero.role">Ingeniero de software en formación</p>
+        <p class="title-meta" data-i18n="hero.meta">Estudiante de cuarto año de Ingeniería en Desarrollo de Software en la Universidad de Oriente (UNIVO). Construyo aplicaciones web, móviles y de machine learning de punta a punta.</p>
+
+        <p class="press-start" aria-hidden="true" data-i18n="hero.start">Pulsa start</p>
+        <div class="title-actions">
+          <a class="button" href="mailto:mahh3899@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-pixel-arrow"/></svg><span data-i18n="hero.cta">Escríbeme</span></a>
+          <a class="button button-ghost" href="#proyectos"><span data-i18n="hero.stages">Elegir nivel</span><svg class="icon" aria-hidden="true"><use href="#i-pixel-arrow"/></svg></a>
         </div>
       </div>
     </section>
 
-    <section class="projects wrap" id="proyectos" aria-labelledby="projects-title">
-      <header class="block-head reveal">
-        <h2 id="projects-title" data-i18n="projects.title">Proyectos.</h2>
-        <p data-i18n="projects.sub">Lo que construí y qué parte hice yo en cada uno.</p>
+    <!-- Proyectos: selección de niveles -->
+    <section class="section wrap" id="proyectos" aria-labelledby="projects-title">
+      <header class="section-head reveal">
+        <h2 class="section-title" id="projects-title" data-i18n="projects.title">Elige un nivel.</h2>
+        <p class="section-sub" data-i18n="projects.sub">Lo que construí y qué parte hice yo en cada uno.</p>
       </header>
-      <div class="tiles" id="projects"></div>
-    </section>
-
-    <section class="education wrap" id="formacion" aria-labelledby="education-title">
-      <header class="block-head reveal">
-        <h2 id="education-title" data-i18n="education.title">Formación.</h2>
-      </header>
-      <div class="degree tile reveal">
-        <h3 class="degree-name" data-i18n="education.degree">Ingeniería en Desarrollo de Software</h3>
-        <p class="degree-school" data-i18n="education.school">Universidad de Oriente (UNIVO) · 4.º año</p>
+      <div class="stage-select reveal">
+        <div class="stages" id="stage-list" role="tablist" aria-label="Proyectos"></div>
+        <p class="stage-hint" data-i18n="projects.hint">Usa ← y → para cambiar de nivel.</p>
       </div>
-      <h3 class="certs-title reveal" data-i18n="certs.title">Certificaciones</h3>
-      <ul class="certs reveal" id="certs"></ul>
+      <div class="level crt reveal" id="level-panel" role="tabpanel" tabindex="0"></div>
     </section>
 
-    <section class="tools wrap" id="herramientas" aria-labelledby="tools-title">
-      <header class="block-head reveal">
-        <h2 id="tools-title" data-i18n="tools.title">Herramientas.</h2>
-        <p data-i18n="tools.sub">Con lo que trabajo, de la base de datos a la interfaz.</p>
+    <!-- Formación -->
+    <section class="section wrap" id="formacion" aria-labelledby="education-title">
+      <header class="section-head reveal">
+        <h2 class="section-title" id="education-title" data-i18n="education.title">Formación.</h2>
       </header>
-      <dl class="specs reveal" id="specs"></dl>
+      <dl class="profile reveal">
+        <div class="profile-row profile-row-wide">
+          <dt data-i18n="profile.degree">Carrera</dt>
+          <dd data-i18n="profile.degreeValue">Ingeniería en Desarrollo de Software</dd>
+        </div>
+        <div class="profile-row">
+          <dt data-i18n="profile.school">Universidad</dt>
+          <dd data-i18n="profile.schoolValue">Universidad de Oriente (UNIVO)</dd>
+        </div>
+        <div class="profile-row">
+          <dt data-i18n="profile.year">Año</dt>
+          <dd data-i18n="profile.yearValue">4.º</dd>
+        </div>
+      </dl>
+
+      <h3 class="subsection-title reveal" id="certs-title" data-i18n="certs.title">Certificaciones</h3>
+      <div class="scores reveal">
+        <table aria-labelledby="certs-title">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="certs.date">Fecha</th>
+              <th scope="col" data-i18n="certs.name">Certificación</th>
+              <th scope="col" data-i18n="certs.issuer">Emisor</th>
+            </tr>
+          </thead>
+          <tbody id="cert-rows"></tbody>
+        </table>
+      </div>
     </section>
 
-    <section class="contact wrap" id="contacto" aria-labelledby="contact-title">
-      <h2 id="contact-title" class="reveal" data-i18n="contact.title">Construyamos algo.</h2>
-      <p class="contact-sub reveal" data-i18n="contact.sub">¿Tienes una vacante, una práctica o un proyecto freelance? Escríbeme y te respondo.</p>
-      <div class="contact-actions reveal">
-        <a class="pill" href="mailto:mahh3899@gmail.com">mahh3899@gmail.com</a>
-        <a class="more" href="https://github.com/Shadow01xd" target="_blank" rel="noopener">GitHub · @Shadow01xd<svg class="chev" viewBox="0 0 8 14" aria-hidden="true"><path d="M1.5 1.5 6.5 7l-5 5.5"/></svg></a>
+    <!-- Herramientas: inventario -->
+    <section class="section wrap" id="herramientas" aria-labelledby="tools-title">
+      <header class="section-head reveal">
+        <h2 class="section-title" id="tools-title" data-i18n="tools.title">Herramientas.</h2>
+        <p class="section-sub" data-i18n="tools.sub">Con lo que trabajo, de la base de datos a la interfaz.</p>
+      </header>
+      <div class="inventory reveal" id="inventory"></div>
+    </section>
+
+    <!-- Contacto: pantalla de continuar -->
+    <section class="continue crt" id="contacto" aria-labelledby="contact-title">
+      <div class="continue-inner wrap">
+        <h2 class="continue-title" id="contact-title">
+          <span data-i18n="contact.title">¿Continuar?</span>
+          <span class="countdown" id="countdown" aria-hidden="true">9</span>
+        </h2>
+        <p class="continue-sub" data-i18n="contact.sub">Construyamos algo. ¿Tienes una vacante, una práctica o un proyecto freelance? Escríbeme y te respondo.</p>
+        <div class="continue-actions">
+          <a class="button button-plain" href="mailto:mahh3899@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-pixel-arrow"/></svg>mahh3899@gmail.com</a>
+          <a class="button button-ghost" href="https://github.com/Shadow01xd" target="_blank" rel="noopener">GitHub · @Shadow01xd<svg class="icon" aria-hidden="true"><use href="#i-pixel-arrow"/></svg></a>
+        </div>
       </div>
     </section>
   </main>
@@ -90,7 +150,5 @@
     <p>© <span id="year">2026</span> Miguel Ángel Hernández Hernández · @Shadow01xd</p>
     <p data-i18n="quote">“Haz que funcione, hazlo bien, hazlo rápido.” — Kent Beck</p>
   </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>

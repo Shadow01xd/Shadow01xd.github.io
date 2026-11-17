@@ -1,0 +1,32 @@
+/*
+ * Hoja de estilos principal. Solo define el orden de las capas e importa.
+ *
+ *   base/        tokens, reset y estilos globales
+ *   components/  piezas reutilizables (botón, caja de diálogo, chip, pantalla CRT)
+ *   sections/    una hoja por sección de la página
+ *   utilities/   movimiento y ajustes transversales
+ *
+ * Las capas garantizan que una utilidad gane a una sección y una sección a un
+ * componente, sin depender del orden de los selectores ni de !important.
+ */
+@layer base, components, sections, utilities;
+
+@import url("base/tokens.css") layer(base);
+@import url("base/reset.css") layer(base);
+@import url("base/global.css") layer(base);
+
+@import url("components/crt.css") layer(components);
+@import url("components/button.css") layer(components);
+@import url("components/dialog.css") layer(components);
+@import url("components/chip.css") layer(components);
+
+@import url("sections/topbar.css") layer(sections);
+@import url("sections/title-screen.css") layer(sections);
+@import url("sections/section.css") layer(sections);
+@import url("sections/projects.css") layer(sections);
+@import url("sections/education.css") layer(sections);
+@import url("sections/tools.css") layer(sections);
+@import url("sections/contact.css") layer(sections);
+@import url("sections/footer.css") layer(sections);
+
+@import url("utilities/motion.css") layer(utilities);

@@ -1,0 +1,49 @@
+/* Tokens del sistema "pantalla de arcade". Todo color, fuente y medida sale de aquí. */
+:root {
+  /* Vidrio del CRT: tres pasos de negro violáceo */
+  --glass: #07060b;
+  --glass-2: #100e19;
+  --glass-3: #1a1728;
+  --line: #2b2740;
+  --line-strong: #4b4570;
+
+  /* Fósforo: tinta de lectura */
+  --ink: #f4f1ff;
+  --ink-2: #bdb7d9;
+  --ink-3: #948eb3;
+
+  /* Primarios de arcade: un color por nivel, nunca mezclados en degradado */
+  --coin: #ffd23f;
+  --pink: #ff3d6e;
+  --cyan: #39d0ff;
+  --lime: #8dff5a;
+
+  /* Tipografía: píxel para la voz de la máquina, sans legible para leer */
+  --font-pixel: "Tiny5", "Courier New", monospace;
+  --font-text: "Atkinson Hyperlegible Next", "Segoe UI", system-ui, sans-serif;
+
+  /* Medidas: todo se apoya en el píxel de 4px */
+  --px: 4px;
+  --border: 3px;
+  --gutter: 16px;
+  --content: 1120px;
+  --topbar-h: 56px;
+
+  /* Movimiento: por pasos, como en una pantalla de baja resolución */
+  --steps-fast: steps(4, end);
+  --steps-wipe: steps(8, end);
+  --dur-fast: 120ms;
+  --dur-wipe: 360ms;
+  --dur-reveal: 480ms;
+
+  /* Brillo de fósforo (solo sombras de texto; sin degradados) */
+  --bloom: 0 0 18px color-mix(in srgb, currentColor 35%, transparent);
+
+  color-scheme: dark;
+}
+
+/* Cada nivel enciende su propio color de marquesina. */
+[data-color="coin"] { --stage: var(--coin); }
+[data-color="cyan"] { --stage: var(--cyan); }
+[data-color="pink"] { --stage: var(--pink); }
+[data-color="lime"] { --stage: var(--lime); }
