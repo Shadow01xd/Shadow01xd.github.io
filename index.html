@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shadow01xd · Full Stack Developer</title>
-  <meta name="description" content="Portafolio de Shadow01xd: desarrollador full stack de web, móvil y machine learning.">
-  <meta name="color-scheme" content="dark light">
-  <meta property="og:title" content="Shadow01xd · Full Stack Developer">
-  <meta property="og:description" content="Web, móvil y machine learning, del modelo a la interfaz.">
+  <title>Miguel Ángel Hernández · Ingeniero de software en formación</title>
+  <meta name="description" content="Portafolio de Miguel Ángel Hernández Hernández (Shadow01xd): estudiante de cuarto año de Ingeniería en Desarrollo de Software en la Universidad de Oriente (UNIVO) y desarrollador full stack.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Miguel Ángel Hernández · Ingeniero de software en formación">
+  <meta property="og:description" content="Cuarto año de Ingeniería en Desarrollo de Software, UNIVO. Web, móvil y machine learning.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,14 +21,11 @@
 
   <header class="topbar">
     <nav class="nav wrap" aria-label="Principal">
-      <a class="brand" href="#top" aria-label="Inicio">
-        <span class="brand-mark" aria-hidden="true">&gt;_</span>
-        <span>Shadow01xd</span>
-      </a>
+      <a class="brand" href="#top">Miguel Ángel Hernández</a>
       <ul class="nav-links">
         <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
-        <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
-        <li><a href="#certificaciones" data-i18n="nav.certs">Certificaciones</a></li>
+        <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
+        <li><a href="#herramientas" data-i18n="nav.tools">Herramientas</a></li>
         <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
       </ul>
       <div class="lang" role="group" aria-label="Idioma / Language">
@@ -38,69 +36,59 @@
   </header>
 
   <main id="main">
-    <section class="hero wrap" id="top">
-      <div class="hero-copy">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Desarrollador Full Stack · Estudiante de Desarrollo de Software</p>
-        <h1 class="hero-title">Shadow01xd</h1>
-        <p class="hero-lead" data-i18n="hero.lead">Construyo aplicaciones web, móviles y de machine learning de punta a punta: del modelo y la API a la interfaz que usa la gente.</p>
-        <p class="typed" aria-hidden="true"><span class="prompt">$</span> <span id="typed"></span><span class="caret"></span></p>
+    <section class="hero" id="top">
+      <div class="wrap hero-inner">
+        <h1 class="hero-name">Miguel Ángel Hernández</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Ingeniero de software en formación.</p>
+        <p class="hero-meta" data-i18n="hero.meta">Estudiante de cuarto año de Ingeniería en Desarrollo de Software en la Universidad de Oriente (UNIVO). Construyo aplicaciones web, móviles y de machine learning de punta a punta.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#proyectos" data-i18n="hero.cta">Ver proyectos</a>
-          <a class="btn btn-ghost" href="https://github.com/Shadow01xd" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="pill" href="#contacto" data-i18n="hero.cta">Escríbeme</a>
+          <a class="more" href="#proyectos"><span data-i18n="hero.projects">Ver proyectos</span><svg class="chev" viewBox="0 0 8 14" aria-hidden="true"><path d="M1.5 1.5 6.5 7l-5 5.5"/></svg></a>
         </div>
       </div>
-
-      <figure class="code-card" aria-label="Resumen en código">
-        <figcaption class="code-head">
-          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span>shadow01xd.js</span>
-        </figcaption>
-        <pre><code id="code-card"></code></pre>
-      </figure>
     </section>
 
-    <section class="section wrap" id="proyectos" aria-labelledby="proyectos-title">
-      <header class="section-head">
-        <p class="section-index">01</p>
-        <h2 id="proyectos-title" data-i18n="projects.title">Proyectos destacados</h2>
-        <p class="section-sub" data-i18n="projects.sub">Qué hace cada uno y qué parte hice yo.</p>
+    <section class="projects wrap" id="proyectos" aria-labelledby="projects-title">
+      <header class="block-head reveal">
+        <h2 id="projects-title" data-i18n="projects.title">Proyectos.</h2>
+        <p data-i18n="projects.sub">Lo que construí y qué parte hice yo en cada uno.</p>
       </header>
-      <div class="projects" id="projects"></div>
+      <div class="tiles" id="projects"></div>
     </section>
 
-    <section class="section wrap" id="stack" aria-labelledby="stack-title">
-      <header class="section-head">
-        <p class="section-index">02</p>
-        <h2 id="stack-title" data-i18n="stack.title">Stack tecnológico</h2>
+    <section class="education wrap" id="formacion" aria-labelledby="education-title">
+      <header class="block-head reveal">
+        <h2 id="education-title" data-i18n="education.title">Formación.</h2>
       </header>
-      <div class="stack" id="stack-groups"></div>
+      <div class="degree tile reveal">
+        <h3 class="degree-name" data-i18n="education.degree">Ingeniería en Desarrollo de Software</h3>
+        <p class="degree-school" data-i18n="education.school">Universidad de Oriente (UNIVO) · 4.º año</p>
+      </div>
+      <h3 class="certs-title reveal" data-i18n="certs.title">Certificaciones</h3>
+      <ul class="certs reveal" id="certs"></ul>
     </section>
 
-    <section class="section wrap" id="certificaciones" aria-labelledby="certs-title">
-      <header class="section-head">
-        <p class="section-index">03</p>
-        <h2 id="certs-title" data-i18n="certs.title">Certificaciones</h2>
+    <section class="tools wrap" id="herramientas" aria-labelledby="tools-title">
+      <header class="block-head reveal">
+        <h2 id="tools-title" data-i18n="tools.title">Herramientas.</h2>
+        <p data-i18n="tools.sub">Con lo que trabajo, de la base de datos a la interfaz.</p>
       </header>
-      <ol class="certs" id="certs"></ol>
+      <dl class="specs reveal" id="specs"></dl>
     </section>
 
-    <section class="section wrap contact" id="contacto" aria-labelledby="contact-title">
-      <header class="section-head">
-        <p class="section-index">04</p>
-        <h2 id="contact-title" data-i18n="contact.title">Hablemos</h2>
-        <p class="section-sub" data-i18n="contact.sub">¿Tienes un proyecto, una práctica o una vacante? Escríbeme.</p>
-      </header>
-      <div class="contact-links">
-        <a class="btn btn-primary" href="mailto:mahh3899@gmail.com">mahh3899@gmail.com</a>
-        <a class="btn btn-ghost" href="https://github.com/Shadow01xd" target="_blank" rel="noopener">github.com/Shadow01xd ↗</a>
-        <a class="btn btn-ghost" href="https://platzi.com/@mahh3899/" target="_blank" rel="noopener">Platzi ↗</a>
+    <section class="contact wrap" id="contacto" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="reveal" data-i18n="contact.title">Construyamos algo.</h2>
+      <p class="contact-sub reveal" data-i18n="contact.sub">¿Tienes una vacante, una práctica o un proyecto freelance? Escríbeme y te respondo.</p>
+      <div class="contact-actions reveal">
+        <a class="pill" href="mailto:mahh3899@gmail.com">mahh3899@gmail.com</a>
+        <a class="more" href="https://github.com/Shadow01xd" target="_blank" rel="noopener">GitHub · @Shadow01xd<svg class="chev" viewBox="0 0 8 14" aria-hidden="true"><path d="M1.5 1.5 6.5 7l-5 5.5"/></svg></a>
       </div>
     </section>
   </main>
 
   <footer class="footer wrap">
-    <p data-i18n="footer">Hecho a mano con HTML, CSS y JavaScript · Publicado en GitHub Pages</p>
-    <p class="quote" data-i18n="quote">“Haz que funcione, hazlo bien, hazlo rápido.” — Kent Beck</p>
+    <p>© <span id="year">2026</span> Miguel Ángel Hernández Hernández · @Shadow01xd</p>
+    <p data-i18n="quote">“Haz que funcione, hazlo bien, hazlo rápido.” — Kent Beck</p>
   </footer>
 
   <script src="main.js"></script>

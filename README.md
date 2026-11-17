@@ -1,8 +1,10 @@
-# Shadow01xd · Portafolio
+# Miguel Ángel Hernández · Portafolio
 
 Mi portafolio personal, publicado en **https://shadow01xd.github.io**.
 
-Sitio estático hecho con HTML, CSS y JavaScript, sin dependencias ni paso de compilación. Es bilingüe (español / inglés) y se adapta al modo claro u oscuro del sistema.
+Estudiante de cuarto año de Ingeniería en Desarrollo de Software en la Universidad de Oriente (UNIVO).
+
+Es un sitio estático hecho con HTML, CSS y JavaScript, sin dependencias ni paso de compilación, en español e inglés. El diseño sigue el estilo de las páginas de producto de Apple en modo oscuro: cada proyecto se presenta como un producto, con su cifra clave.
 
 ## Editar el contenido
 
@@ -11,12 +13,11 @@ Todos los textos y datos están en [`main.js`](main.js):
 | Objeto | Qué contiene |
 |:--|:--|
 | `UI` | Textos de la interfaz en `es` y `en` |
-| `PROJECTS` | Proyectos destacados: descripción, mi parte, puntos clave y stack |
-| `STACK` | Tecnologías agrupadas por área |
+| `PROJECTS` | Proyectos: frase, cifra clave (`stat`), qué hace, mi parte, tecnologías y enlace. `wide: true` hace que el bloque ocupe todo el ancho |
+| `TOOLS` | Herramientas agrupadas por área |
 | `CERTS` | Certificaciones (fecha en formato `AAAA-MM`) |
-| `CODE` | El objeto que aparece en la tarjeta de código del inicio |
 
-Los estilos están en [`styles.css`](styles.css); los colores se definen como variables al principio del archivo.
+Los colores y la tipografía están definidos como variables al principio de [`styles.css`](styles.css).
 
 ## Verlo en local
 
