@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shadow01xd · Full Stack Developer</title>
+  <meta name="description" content="Portafolio de Shadow01xd: desarrollador full stack de web, móvil y machine learning.">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Shadow01xd · Full Stack Developer">
+  <meta property="og:description" content="Web, móvil y machine learning, del modelo a la interfaz.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Principal">
+      <a class="brand" href="#top" aria-label="Inicio">
+        <span class="brand-mark" aria-hidden="true">&gt;_</span>
+        <span>Shadow01xd</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+        <li><a href="#certificaciones" data-i18n="nav.certs">Certificaciones</a></li>
+        <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Desarrollador Full Stack · Estudiante de Desarrollo de Software</p>
+        <h1 class="hero-title">Shadow01xd</h1>
+        <p class="hero-lead" data-i18n="hero.lead">Construyo aplicaciones web, móviles y de machine learning de punta a punta: del modelo y la API a la interfaz que usa la gente.</p>
+        <p class="typed" aria-hidden="true"><span class="prompt">$</span> <span id="typed"></span><span class="caret"></span></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos" data-i18n="hero.cta">Ver proyectos</a>
+          <a class="btn btn-ghost" href="https://github.com/Shadow01xd" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <figure class="code-card" aria-label="Resumen en código">
+        <figcaption class="code-head">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>shadow01xd.js</span>
+        </figcaption>
+        <pre><code id="code-card"></code></pre>
+      </figure>
+    </section>
+
+    <section class="section wrap" id="proyectos" aria-labelledby="proyectos-title">
+      <header class="section-head">
+        <p class="section-index">01</p>
+        <h2 id="proyectos-title" data-i18n="projects.title">Proyectos destacados</h2>
+        <p class="section-sub" data-i18n="projects.sub">Qué hace cada uno y qué parte hice yo.</p>
+      </header>
+      <div class="projects" id="projects"></div>
+    </section>
+
+    <section class="section wrap" id="stack" aria-labelledby="stack-title">
+      <header class="section-head">
+        <p class="section-index">02</p>
+        <h2 id="stack-title" data-i18n="stack.title">Stack tecnológico</h2>
+      </header>
+      <div class="stack" id="stack-groups"></div>
+    </section>
+
+    <section class="section wrap" id="certificaciones" aria-labelledby="certs-title">
+      <header class="section-head">
+        <p class="section-index">03</p>
+        <h2 id="certs-title" data-i18n="certs.title">Certificaciones</h2>
+      </header>
+      <ol class="certs" id="certs"></ol>
+    </section>
+
+    <section class="section wrap contact" id="contacto" aria-labelledby="contact-title">
+      <header class="section-head">
+        <p class="section-index">04</p>
+        <h2 id="contact-title" data-i18n="contact.title">Hablemos</h2>
+        <p class="section-sub" data-i18n="contact.sub">¿Tienes un proyecto, una práctica o una vacante? Escríbeme.</p>
+      </header>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:mahh3899@gmail.com">mahh3899@gmail.com</a>
+        <a class="btn btn-ghost" href="https://github.com/Shadow01xd" target="_blank" rel="noopener">github.com/Shadow01xd ↗</a>
+        <a class="btn btn-ghost" href="https://platzi.com/@mahh3899/" target="_blank" rel="noopener">Platzi ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p data-i18n="footer">Hecho a mano con HTML, CSS y JavaScript · Publicado en GitHub Pages</p>
+    <p class="quote" data-i18n="quote">“Haz que funcione, hazlo bien, hazlo rápido.” — Kent Beck</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
