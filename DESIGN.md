@@ -1,297 +1,282 @@
 ---
 name: Miguel Ángel Hernández · Portfolio
-description: A dark, product-launch portfolio where each project is presented like a flagship device.
+description: An arcade cabinet screen where every project is a stage with its own lit marquee and a real score.
 colors:
-  bg: "#000000"
-  tile: "#161617"
-  tile-2: "#1d1d1f"
-  line: "#2c2c2e"
-  text: "#f5f5f7"
-  text-2: "#a1a1a6"
-  text-3: "#8e8e93"
-  link: "#2997ff"
-  button: "#0071e3"
-  button-hover: "#0062c4"
-  on-button: "#ffffff"
+  glass: "#07060b"
+  glass-2: "#100e19"
+  glass-3: "#1a1728"
+  line: "#2b2740"
+  line-strong: "#4b4570"
+  ink: "#f4f1ff"
+  ink-2: "#bdb7d9"
+  ink-3: "#948eb3"
+  coin: "#ffd23f"
+  coin-hover: "#ffe27a"
+  coin-pressed: "#e3b52a"
+  pink: "#ff3d6e"
+  cyan: "#39d0ff"
+  lime: "#8dff5a"
 typography:
   display:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(2.75rem, 7.4vw, 5rem)"
-    fontWeight: 600
-    lineHeight: 1.05
-    letterSpacing: "-0.035em"
-  hero-stat:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(3.5rem, 7vw, 5.5rem)"
-    fontWeight: 600
-    lineHeight: 1
-    letterSpacing: "-0.04em"
+    fontFamily: "Tiny5, Courier New, monospace"
+    fontSize: "clamp(2.75rem, 10vw, 6rem)"
+    fontWeight: 400
+    lineHeight: 0.95
+    letterSpacing: "0.01em"
+  score:
+    fontFamily: "Tiny5, Courier New, monospace"
+    fontSize: "clamp(4rem, 9vw, 6rem)"
+    fontWeight: 400
+    lineHeight: 0.9
     fontFeature: "tnum"
   headline:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(2.25rem, 5vw, 3.5rem)"
-    fontWeight: 600
-    lineHeight: 1.07
-    letterSpacing: "-0.03em"
+    fontFamily: "Tiny5, Courier New, monospace"
+    fontSize: "clamp(2.25rem, 6vw, 4rem)"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "0.01em"
   title:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(2rem, 3.6vw, 2.75rem)"
-    fontWeight: 600
-    lineHeight: 1.08
-    letterSpacing: "-0.03em"
+    fontFamily: "Tiny5, Courier New, monospace"
+    fontSize: "clamp(2.25rem, 5vw, 3.75rem)"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "0.01em"
   subhead:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(1.5rem, 3.2vw, 2.25rem)"
-    fontWeight: 600
-    lineHeight: 1.15
-    letterSpacing: "-0.025em"
-  lead:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "21px"
+    fontFamily: "Tiny5, Courier New, monospace"
+    fontSize: "clamp(1.05rem, 2.4vw, 1.6rem)"
     fontWeight: 400
-    lineHeight: 1.5
-    letterSpacing: "-0.011em"
-  body:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "17px"
-    fontWeight: 400
-    lineHeight: 1.5
-    letterSpacing: "-0.011em"
-  body-small:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "15px"
-    fontWeight: 400
-    lineHeight: 1.5
-    letterSpacing: "-0.011em"
+    lineHeight: 1.2
+    letterSpacing: "0.06em"
   label:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "13px"
-    fontWeight: 600
-    lineHeight: 1.5
-    letterSpacing: "-0.011em"
-  micro:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "12px"
-    fontWeight: 500
-    lineHeight: 1.4
-    letterSpacing: "-0.011em"
+    fontFamily: "Tiny5, Courier New, monospace"
+    fontSize: "14px"
+    fontWeight: 400
+    lineHeight: 1.2
+    letterSpacing: "0.08em"
+  lead:
+    fontFamily: "Atkinson Hyperlegible Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "20px"
+    fontWeight: 400
+    lineHeight: 1.55
+  body:
+    fontFamily: "Atkinson Hyperlegible Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "18px"
+    fontWeight: 400
+    lineHeight: 1.55
+  body-small:
+    fontFamily: "Atkinson Hyperlegible Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.55
 rounded:
-  focus: "6px"
-  tile: "24px"
-  pill: "980px"
+  none: "0px"
+  pixel-notch: "4px"
 spacing:
-  xxs: "4px"
+  px: "4px"
   xs: "8px"
   sm: "16px"
   md: "24px"
-  inline: "28px"
   lg: "40px"
   xl: "48px"
-  xxl: "64px"
   section: "120px"
   section-mobile: "88px"
 components:
-  nav-bar:
-    backgroundColor: "rgba(0, 0, 0, 0.8)"
-    textColor: "{colors.text}"
-    height: "48px"
-  nav-link:
-    textColor: "{colors.text-2}"
+  button-primary:
+    backgroundColor: "{colors.coin}"
+    textColor: "{colors.glass}"
     typography: "{typography.label}"
-  nav-link-hover:
-    textColor: "{colors.text}"
-  lang-toggle:
+    rounded: "{rounded.pixel-notch}"
+    padding: "12px 22px"
+    height: "48px"
+  button-primary-hover:
+    backgroundColor: "{colors.coin-hover}"
+  button-primary-active:
+    backgroundColor: "{colors.coin-pressed}"
+  button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.text-3}"
-    typography: "{typography.micro}"
-    rounded: "{rounded.pill}"
-    padding: "4px 8px"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pixel-notch}"
+    padding: "12px 22px"
+    height: "48px"
+  button-ghost-hover:
+    textColor: "{colors.cyan}"
+  stage-tab:
+    backgroundColor: "{colors.glass-2}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pixel-notch}"
+  stage-tab-selected:
+    backgroundColor: "{colors.glass-3}"
+  level-panel:
+    backgroundColor: "{colors.glass-2}"
+    rounded: "{rounded.pixel-notch}"
+    padding: "48px"
+  dialog-box:
+    backgroundColor: "{colors.glass}"
+    textColor: "{colors.ink-2}"
+    rounded: "{rounded.none}"
+    padding: "20px 22px 22px"
+  inventory-slot:
+    backgroundColor: "{colors.glass}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pixel-notch}"
+    padding: "8px 12px"
+    height: "40px"
+  chip:
+    backgroundColor: "{colors.glass-2}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.none}"
+    padding: "6px 10px 5px"
   lang-toggle-active:
-    backgroundColor: "{colors.tile-2}"
-    textColor: "{colors.text}"
-  button-pill:
-    backgroundColor: "{colors.button}"
-    textColor: "{colors.on-button}"
-    typography: "{typography.body}"
-    rounded: "{rounded.pill}"
-    padding: "11px 22px"
-    height: "44px"
-  button-pill-hover:
-    backgroundColor: "{colors.button-hover}"
-  link-chevron:
-    textColor: "{colors.link}"
-    typography: "{typography.body}"
-  project-tile:
-    backgroundColor: "{colors.tile}"
-    textColor: "{colors.text}"
-    rounded: "{rounded.tile}"
-    padding: "56px 40px 48px"
-  project-tile-wide:
-    backgroundColor: "{colors.tile}"
-    rounded: "{rounded.tile}"
-    padding: "72px 56px 56px"
-  degree-tile:
-    backgroundColor: "{colors.tile}"
-    rounded: "{rounded.tile}"
-    padding: "64px 40px"
-  cert-row:
-    textColor: "{colors.text}"
-    typography: "{typography.body}"
-    padding: "16px 0"
-  spec-row:
-    textColor: "{colors.text-2}"
-    typography: "{typography.body}"
-    padding: "24px 0"
+    backgroundColor: "{colors.coin}"
+    textColor: "{colors.glass}"
+    typography: "{typography.label}"
 ---
 
 # Design System: Miguel Ángel Hernández · Portfolio
 
 ## Overview
 
-**Creative North Star: "The Keynote Stage"**
+**Creative North Star: "The Arcade Cabinet"**
 
-The page is a product launch held in a dark auditorium: a black floor, graphite tiles lit from nowhere, and one blue that appears only where the visitor can act. Every project is introduced the way a flagship device is: a big name, one honest line, one hero number, and only then the spec details. The world is typographic. There is no imagery, no illustration and no ornament; scale, weight and tracking carry the whole hierarchy.
+The page is a cabinet switched on in a dark room. A visitor arrives on a title screen: the name in fat yellow pixel letters with a pink shade, a cyan role line, a blinking PRESS START and two buttons. Scrolling down plays the machine. The stage select lights one marquee per project. The level panel shows the project's real score at a scale nothing else on the page reaches. Education is a player profile and a framed certifications log, the tools are an inventory of slots, and the contact closes on a "Continue?" screen with a countdown.
 
-Density is low and deliberately generous. Compositions are centered and symmetrical at the top of every block, then shift to left-aligned reading inside the details, the certifications list and the spec table, the way a product page moves from stage to fine print. Depth comes from three near-black steps, never from shadow or glow. Motion is a single soft fade-up as content enters, plus a small press on the pill; nothing loops, nothing hovers in place.
+The machine speaks in the pixel face (Tiny5) and the visitor reads in a plain sans (Atkinson Hyperlegible Next). Every name, number, label and control is pixel type. Every sentence that has to be read is sans, set inside framed dialog boxes or as a lead under a heading. The surface is CRT glass: near-black violet with 4px scanlines and an inner vignette. Four arcade primaries carry identity, one per stage. Motion moves in steps, never in smooth easing.
 
-The world rejects developer-template chrome outright (terminal cards, neon, glow, skill bars) and, by binding brand commitment, gradients of any kind.
+The world refuses the dark card-grid developer portfolio, terminal chrome, neon glow on everything, and, by binding brand commitment, gradients of any kind.
 
 **Key Characteristics:**
-- Pure black page, graphite rounded tiles, near-white type, two gray tiers.
-- One blue hue, reserved for action: links, the pill button, focus and selection.
-- One face (Inter) at 600 for every heading and number; weight and tracking do the work.
-- Centered stage at the top of each block, left-aligned fine print beneath.
-- Flat: no shadows, no gradients, no glow.
-- One fade-up reveal, once, from a visible default.
+- Near-black violet CRT glass with 4px scanlines drawn by an SVG tile (not a gradient).
+- Two faces with fixed jobs: Tiny5 for the machine's voice, Atkinson Hyperlegible Next for reading.
+- Four arcade primaries (coin, pink, cyan, lime), one per stage, never blended.
+- Pixel-stepped corners on controls and stage frames; square corners elsewhere.
+- Motion in `steps()`: blink, twinkle, a stepped wipe between levels, a fading pixel trail.
 
 ## Colors
 
-A near-achromatic black-and-graphite palette with a single blue hue that means "you can act here".
+CRT glass in three violet-black steps, phosphor inks in three tiers, and four arcade primaries that name things rather than decorate them.
 
 ### Primary
-- **Keynote Blue** (link): the text-on-black expression of the accent. Every text link, the chevron link, the focus ring and the text selection fill. Bright enough to read on black and on tiles (6.96:1 on the page, 6.0:1 on a tile).
-- **Action Blue** (button): the filled expression of the same hue, deeper so a white label stays legible (4.7:1). Used only as the pill button's fill. **Action Blue Pressed** (button-hover) is its hover state.
-- **Label White** (on-button): the pill's label and the selection text.
+- **Coin Yellow** (#ffd23f): the primary action fill (buttons, active language), the hero name, the selected marquee for coin stages, certification dates, the degree name. **Coin Lit** (#ffe27a) is its hover step and **Coin Pressed** (#e3b52a) its pressed step.
+
+### Secondary
+- **Player Pink** (#ff3d6e): the shade under the hero name and brand mark, profile labels, the countdown numeral, selection fill. It is also the Sistema-Ticket-CRS stage colour.
+- **Cabinet Cyan** (#39d0ff): the role line, table headers, focus ring, and ghost-button hover. It is also the NVCode stage colour.
+
+### Tertiary
+- **Phosphor Lime** (#8dff5a): the SIA-U stage colour and the fourth inventory row.
 
 ### Neutral
-- **Stage Black** (bg): the page, the browser chrome (theme-color) and the base of the translucent nav bar.
-- **Graphite Tile** (tile): every tile surface (project, degree). The only container fill.
-- **Raised Graphite** (tile-2): the one step above a tile, used for the active language toggle.
-- **Hairline** (line): 1px rules: the top of each tile's detail block, certification and spec rows, the footer edge, unhovered link underlines.
-- **Paper White** (text): headings, names, hero numbers, body that must be read first.
-- **Quiet Gray** (text-2): subheads, taglines, leads, details, nav links. 8.2:1 on black.
-- **Fine-Print Gray** (text-3): dates, the private-repo note, footer, inactive language toggle, list markers. 6.4:1 on black; the floor for any text.
+- **Glass** (#07060b): the page, the topbar, dialog-box interiors, inventory slots.
+- **Glass Raised** (#100e19): stage tabs, the level panel, profile, score table, inventory and contact surfaces.
+- **Glass Lit** (#1a1728): hovered and selected tabs, hovered table rows.
+- **Scan Line** (#2b2740): rules, dashed separators, the topbar edge.
+- **Bezel** (#4b4570): frames of dialog boxes, panels, chips and slots; the shade under section titles.
+- **Phosphor White** (#f4f1ff): headings, scores, body that must be read first.
+- **Phosphor Dim** (#bdb7d9): leads, dialog text, taglines, nav links.
+- **Phosphor Faint** (#948eb3): hints, footer, inactive language, private-repo note. This is the floor for any text.
 
 ### Named Rules
-**The One Blue Rule.** Blue is the only hue in the system and it appears only on things you can click or have focused. Headings, numbers, labels and decoration are never blue.
+**The One Stage, One Colour Rule.** Each project owns exactly one arcade primary (`data-color` on the tab and the panel sets `--stage`). The marquee, the panel frame, the score label and the bullets all take that colour, and no other primary appears inside the level.
 
-**The Two-Weight Blue Rule.** The accent has two values: the bright link value for text and outlines on black, the deeper action value for filled surfaces carrying white text. Never put white text on the bright link value (3.0:1).
-
-**The Graphite Step Rule.** Surfaces separate by lightness alone: black page, graphite tile, raised graphite control. Never add a fourth step, a tint, or a border around a tile.
+**The No-Blend Rule.** Primaries are never mixed into gradients. The only mixing allowed is `color-mix` against Glass to dim an unselected marquee (14%) or to tint a shade, which keeps the dimmed marquee text above 4.5:1.
 
 ## Typography
 
-**Display Font:** Inter (with system-ui, -apple-system, Segoe UI, sans-serif)
-**Body Font:** Inter (same stack)
+**Display Font:** Tiny5 (with Courier New, monospace)
+**Body Font:** Atkinson Hyperlegible Next (with Segoe UI, system-ui, sans-serif)
 
-**Character:** One neo-grotesque doing everything, standing in for the SF Pro of the reference style. Headings are heavy and tightly tracked so large sizes read as a single shape; body stays at regular weight with a whisper of negative tracking for an engineered, even texture.
+**Character:** Tiny5 is a compact pixel face with unambiguous numerals; "15+" and "0.82" read cleanly where other pixel faces turned 5 into S. Atkinson is built for legibility, which is why every long sentence, email address and stack name uses it.
 
 ### Hierarchy
-- **Display** (600, clamp 44px to 80px, 1.05): the name in the hero and the contact headline. At most two per page.
-- **Hero Stat** (600, clamp 56px to 88px, 1.0, tabular numerals): the single hero number inside each project tile. The largest type on any tile.
-- **Headline** (600, clamp 36px to 56px, 1.07): section headlines, written as short statements ending in a period. Wide project tiles promote their name to this size.
-- **Title** (600, clamp 32px to 44px, 1.08): project names in half-width tiles; the degree name sits just above it (clamp 30px to 48px, 1.1, balanced wrap).
-- **Subhead** (600, clamp 24px to 36px, 1.15, Quiet Gray): the line under the hero name.
-- **Lead** (400, 21px, Quiet Gray): section intros, the school line, the contact invitation. The hero meta line is the same role at 19px (17px on phones), capped at 40em. Project taglines are a fluid lead (clamp 18px to 24px, 1.32, -0.02em), capped at 24em.
-- **Body** (400, 17px, 1.5): certification names, spec rows, the pill and chevron link labels (500 for the pill).
-- **Body Small** (400, 15px, 1.5): tile detail paragraphs and bullets, issuer and date columns.
-- **Label** (600, 13px): the small headings inside a tile's detail block. Nav links use the same size at 400 in Quiet Gray; the brand name is 14px 600; the stat caption is 14px Quiet Gray.
-- **Micro** (500, 12px): the language toggle; the footer uses 12px at 400 in Fine-Print Gray.
+- **Display** (Tiny5 400, clamp 44–96px, 0.95, uppercase): the hero name. One per page.
+- **Score** (Tiny5 400, clamp 64–96px, 0.9, tabular): the level's hero number, the largest thing inside the panel.
+- **Headline** (Tiny5 400, clamp 36–64px, 1.0, uppercase, Bezel shade): section titles. The contact heading uses the same family at clamp 40–84px in Coin.
+- **Title** (Tiny5 400, clamp 36–60px, uppercase, stage colour): the level name.
+- **Subhead** (Tiny5 400, clamp 17–26px, 0.06em, uppercase): the hero role line in Cyan.
+- **Label** (Tiny5 400, 13–18px, 0.06–0.1em, uppercase): nav links, HUD, dialog titles, profile and table headers, inventory labels, stage units, buttons (17px).
+- **Lead** (Atkinson 400, 19–20px, 1.55, Phosphor Dim): section subs, the hero meta (max 36em), the contact sub (max 34em).
+- **Body** (Atkinson 400, 18px, 1.55): the default; certification names, profile values (20px).
+- **Body Small** (Atkinson 400, 15–16px): dialog text, taglines, chips, slots, score captions.
 
 ### Named Rules
-**The Tightening Rule.** Tracking tightens as size grows: -0.011em body, -0.02em taglines, -0.025em subhead, -0.03em headlines and titles, -0.035em display, -0.04em hero stat. Never track large type positively, never set display at 400.
+**The Machine Speaks, You Read Rule.** Pixel type is for names, numbers, labels and controls. Any sentence longer than a line, and anything the visitor must copy exactly (an email address), is set in Atkinson.
 
-**The One Face Rule.** Inter only, at 400, 500 and 600. Hierarchy comes from size, weight and gray tier, never from a second family, italics or uppercase.
+**The One Weight Rule.** Tiny5 ships one weight and `font-synthesis: none` forbids faux bold. Hierarchy comes from size, colour and the pixel shade, never from weight.
 
 ## Layout
 
-A single centered column, min(1080px, 100% minus two 16px gutters), with the 16px side gutter at every width. Blocks are stacked sections with large vertical air: 40px above and 120px below each content block (24px and 88px on phones); the hero gets 136px and 120px (88px and 80px on phones), the contact block 80px and 140px (56px and 96px).
+A single centered column, `min(1120px, 100% - 32px)`, with a 16px gutter at every width. The title screen fills the first viewport (`100svh` minus the topbar) with the HUD pinned to its top. Content sections open with 120px above (88px on phones), and each head sits 40px above its content (28px on phones).
 
-Each block opens with a centered head (headline, optional lead, 48px below; 32px on phones). Project tiles sit in a two-column grid with a 16px gap; a wide tile spans both columns and lays its three detail groups side by side, collapsing to one column below 900px. Below 734px every tile goes single-column and tile padding drops to 48px 24px 40px.
+The stage select is a four-column grid with 12px gaps. It drops to two columns below 960px; below 520px tabs hide the tagline but keep score and unit. The level panel is a 5fr/6fr two-column grid with 48px gaps and padding, stacking below 960px (36px/28px padding, then 28px/18px). The inventory is one panel of rows with a 220px label column, stacking below 720px. The profile is a 3fr/1fr grid; the score table reflows to stacked rows below 720px. The topbar wraps on phones: the nav becomes a second row of four evenly spaced links.
 
-Lists are rows, not cards: certifications are a three-column row (name, issuer, right-aligned date in a fixed 120px column) that reflows on phones to the name above issuer and date. Tools are a definition table, one quarter label to three quarters value, stacking on phones.
-
-Spacing follows a 4px base with 8px steps for most gaps (4, 8, 16, 24, 40, 48, 64), plus a recurring 28px for inline groups (nav links, hero actions, the rule above tile details).
-
-### Named Rules
-**The Stage-Then-Fine-Print Rule.** Headlines, tile heads and hero numbers are centered; anything read line by line (tile details, cert rows, spec rows) is left-aligned and full width. Never center a list or a paragraph longer than two lines.
+Spacing rides a 4px pixel unit: 4, 8, 12, 16, 20, 24, 28, 40, 48, plus the 120/88 section rhythm.
 
 ## Elevation & Depth
 
-The system is flat. No element casts a shadow, glows, or carries a gradient. Depth is tonal: Stage Black, then Graphite Tile, then Raised Graphite, with Hairline rules dividing content inside or beneath them. The only material effect is the sticky nav bar: Stage Black at 80% opacity over a saturate(180%) blur(20px) backdrop, with a 1px white-at-8% bottom edge, so content slides under it like frosted glass.
+The cabinet is flat. Depth is tonal (Glass → Glass Raised → Glass Lit) plus three material effects:
+- The CRT scanline tile.
+- An inset vignette (`box-shadow: inset 0 0 120px rgb(0 0 0 / .55)`) on title, level and contact screens.
+- A phosphor bloom on display numbers and names (`text-shadow: 0 0 18px` at 35% of the current colour).
+
+The display type also carries a solid pixel shade (`0.06em 0.06em 0`) in Pink, Bezel or a stage tint. That is the arcade logo convention and it is applied to type only.
 
 ### Named Rules
-**The No-Shadow Rule.** No box-shadow, text-shadow, glow or gradient anywhere. If something needs to stand forward, it moves one graphite step lighter.
+**The Type-Only Shade Rule.** Solid offset shades belong to pixel display type. Boxes and buttons never cast an offset shadow; they step colour instead.
 
 ## Shapes
 
-Two silhouettes. Containers are generously rounded rectangles (24px) with no border; every interactive control that carries a fill is a full pill (980px), including the skip link and the language toggle. Focus rings round to 6px with a 3px offset. Rules are 1px Hairline, horizontal only. The chevron (an open 7 by 12px stroke, 1.8px, round caps) is the only glyph, drawn as inline SVG in the current text color.
+There are two silhouettes. Controls and stage frames (buttons, stage tabs, the level panel, inventory slots) use **pixel-stepped corners**: a 12-point `clip-path` (`--pixel-corners`) that removes one 4px pixel at each corner. Reading containers (dialog boxes, profile, score table, inventory frame, chips) keep square corners with 2–3px Bezel borders. Dialog boxes add a second, inner frame line. Bullets are 6px squares, and the only icon is a pixel arrow drawn as crisp-edged SVG rects.
 
 ## Components
 
 ### Buttons
-Confident and quiet: one filled shape per group, never two side by side.
-- **Shape:** full pill (980px), minimum 44px tall.
-- **Pill (primary):** Action Blue fill, Label White text, 17px at 500, padding 11px 22px. Used for the one primary action of a block (the hero call to action, the email address).
-- **Hover / Press:** fill shifts to Action Blue Pressed over 160ms; on press the pill scales to 0.97 with the system ease-out. Press scaling is removed under reduced motion.
-- **Focus:** 2px Keynote Blue outline, 3px offset.
+A coin block that lights up and sinks.
+- **Shape:** pixel-stepped corners, 48px tall, 12px 22px padding.
+- **Primary:** Coin fill with Glass text, Tiny5 17px uppercase, and a pixel arrow before the label.
+- **Hover / Press:** the fill steps to Coin Lit; on press it moves `translateY(2px)` and steps to Coin Pressed (120ms, `steps(4)`).
+- **Ghost:** transparent with a 3px inset Bezel frame. On hover both the frame and the text turn Cyan.
+- **Plain modifier:** Atkinson 700, no uppercase, for the email address.
 
-### Chevron Link (secondary action)
-- **Style:** Keynote Blue text at 17px with a trailing chevron, 6px gap, no underline at rest.
-- **Hover:** underline appears, offset 0.2em.
-- **Use:** paired beside a pill (28px apart), or alone as the repository link at the foot of a project tile.
+### Stage Select (signature)
+An ARIA tablist of four tabs. Each tab stacks three rows:
+- A marquee band with the project name, dimmed to a 14% stage tint.
+- The score in Tiny5 36px with its unit in stage colour.
+- The tagline in Atkinson 15px.
+
+The selected tab lights the marquee to full stage colour with Glass text, frames the tab in stage colour, and shows a blinking pixel cursor. Arrow keys, Home and End move the selection, which activates automatically and wraps.
+
+### Level Panel (signature)
+A stage-coloured frame on Glass Raised with scanlines. The left column holds the name, the tagline, a dashed rule, the score label, the score and its caption. The right column holds three dialog boxes (what it does, my part with square bullets, technologies as chips) and the repository button or a private note. Changing stage replays an 8-step `clip-path` wipe on both columns.
+
+### Dialog Box
+A square double frame with a Tiny5 title in the context accent (`--stage` or Cyan) and Atkinson text in Phosphor Dim.
+
+### Inventory
+One framed panel. Each row is a coloured Tiny5 label beside a run of slots, and rows are divided by dashed Scan Line rules. Slots are pixel-cornered Glass cells with a 2px Bezel inset frame. "Learning" slots are dashed outlines without fill: unlocked later.
+
+### Certifications Log and Player Profile
+The profile is a framed definition list: a Pink Tiny5 label over a value, with the degree in Coin Tiny5. Certifications are a framed table with Cyan Tiny5 headers, Coin Tiny5 dates, Atkinson names and dashed row rules.
 
 ### Navigation
-- **Bar:** sticky, 48px tall, frosted Stage Black (see Elevation). Brand name at left (14px 600, Paper White); links pushed right with 28px gaps (13px, Quiet Gray, Paper White on hover over 160ms); language toggle last.
-- **Language toggle:** two pill buttons (ES / EN), 12px 500, Fine-Print Gray; the pressed language sits on Raised Graphite in Paper White, driven by aria-pressed.
-- **Mobile (below 734px):** every nav link except the last (Contact) is hidden; gaps tighten to 16px.
+A sticky 56px Glass bar with a 3px Scan Line bottom edge. The brand "MAH" is in Coin with a Pink shade. Links are Tiny5 15px uppercase in Phosphor Dim and turn Coin on hover. The language toggle is two joined square buttons; the pressed one is Coin.
 
-### Project Tile (signature)
-The product-launch card. A Graphite Tile, 24px radius, centered head: project name (Title, or Headline when wide), tagline in Quiet Gray, then the hero stat 36px below: one large tabular number in Paper White with a 14px Quiet Gray caption naming exactly what it measures. Beneath, after 40px, a Hairline rule and a left-aligned detail block of labelled groups (what it does; my part, with a disc list in Fine-Print Gray markers; technologies joined by middle dots). The foot is a chevron link to the repository or, when private, a Fine-Print Gray note.
-- **Padding:** 56px 40px 48px; wide 72px 56px 56px; phones 48px 24px 40px.
-- **Wide variant:** spans both grid columns; details in three columns above 900px.
-
-### Degree Tile
-A Graphite Tile with only centered type: the degree name over the school and year in Quiet Gray at 21px, 10px apart. Padding 64px 40px (48px 24px on phones). No number and no details: it is a statement, not a card.
-
-### Certifications List
-A 24px 600 heading 64px below the degree tile, then Hairline-ruled rows (16px vertical padding): name in Paper White body, issuer in Quiet Gray 15px, month-and-year date in Fine-Print Gray 15px tabular numerals, right-aligned. Issuers are plain text; a linked issuer, when one exists, takes a Hairline underline that turns Keynote Blue on hover.
-
-### Spec Table
-The tools list as a product spec sheet: a definition list with a Hairline top and Hairline row rules, 24px row padding, category in 17px 600 Paper White, values as a comma-separated run in Quiet Gray at line-height 1.6.
-
-### Contact Block
-A centered closing stage on the bare page (no tile): Display headline, a Quiet Gray lead capped at 34em, then the pill (the email address) beside a chevron link to GitHub.
-
-### Reveal Motion
-Tiles, section heads, the certifications list, the spec table and contact elements fade up 16px once as they enter the viewport: 600ms on the system ease-out, triggered 8% before the bottom edge. Content is visible by default; only elements still below the fold are pre-hidden, and only when the browser can animate. Under reduced motion nothing moves and smooth scrolling is off.
+### Continue Screen
+A full-width scanline screen. The heading reads "¿Continuar?" in Coin with a pink countdown numeral (9→0, only while visible). Below sit the lead and the two buttons.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** keep every surface on the three graphite steps (#000000, #161617, #1d1d1f) and separate content inside them with 1px Hairline (#2c2c2e) rules.
-- **Do** give every project tile exactly one hero number with a caption that names what it measures, and make that number true.
-- **Do** set every heading and number in Inter 600 with negative tracking that tightens as size grows (-0.03em headlines, -0.035em display, -0.04em stats).
-- **Do** pair one blue pill with at most one chevron link per action group, 28px apart.
-- **Do** center stage elements and left-align anything read line by line.
-- **Do** keep text at Fine-Print Gray (#8e8e93) or brighter; nothing dimmer carries words.
-- **Do** keep the reveal visible by default and remove it under reduced motion.
+- **Do** give each project one arcade primary via `data-color` and let `--stage` carry it through tab and panel.
+- **Do** set every name, number, label and control in Tiny5 400. Set every sentence and every exact-copy string in Atkinson.
+- **Do** keep scores true and always pair them with a unit or a caption that says what they measure.
+- **Do** use `steps()` timing for every transition and animation, and drop them all under `prefers-reduced-motion`.
+- **Do** draw focus rings inward on pixel-cornered elements (`outline-offset: calc(-2 * var(--border) - 2px)`), since the corner clip cuts an outer ring.
+- **Do** keep text at Phosphor Faint (#948eb3) or brighter.
 
 ### Don't:
-- **Don't** use gradients, shadows, glow or neon anywhere.
-- **Don't** introduce a second accent hue, or use blue on non-interactive text.
-- **Don't** put white text on the bright link blue (#2997ff); filled controls use the action blue (#0071e3).
-- **Don't** add developer-template chrome: terminal windows, code-editor cards, skill bars or percentage meters.
-- **Don't** add borders around tiles or a fourth surface tone.
-- **Don't** add a second typeface, italics or uppercase labels to create hierarchy.
-- **Don't** add looping, parallax or hover-lift motion; the fade-up and the 0.97 press are the whole vocabulary.
+- **Don't** use gradients (including `repeating-linear-gradient` stripes). Scanlines are an SVG tile.
+- **Don't** put offset box shadows on buttons or boxes; step the colour instead.
+- **Don't** bold Tiny5 or let the browser synthesise weight.
+- **Don't** set long reading text, email addresses or stack names in the pixel face.
+- **Don't** turn tools into a grid of same-size cards, or add skill bars or percentage meters.
+- **Don't** add a kicker or eyebrow line above a heading.

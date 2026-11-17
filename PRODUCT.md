@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML, CSS and JavaScript with no build step, published on GitHub Pages (repo `Shadow01xd.github.io`). Content lives in data objects in `main.js`.
+Static HTML, CSS and native ES modules with no build step, published on GitHub Pages (repo `Shadow01xd.github.io`). Content lives in `src/data/` and UI copy in `src/i18n/`.
 
 ## Users
 
@@ -42,7 +42,7 @@ Visitors arrive from his GitHub profile README, a CV, LinkedIn or a direct link,
 
 - Name shown: Miguel Ángel Hernández Hernández, with the alias Shadow01xd.
 - Binding visual constraints from the user: no gradients; it must not look AI-generated; it must look beautiful.
-- Visual style pinned by the user: "premium" (Apple product page aesthetic), dark. Earlier directions rejected: light tensegrity column, quiet dark résumé.
+- Visual style chosen by the user (2026-11-17 full redesign): arcade cabinet screen (pixel display type, CRT scanlines, arcade primaries on near-black). Replaced the earlier "premium" Apple-dark world. Directions rejected along the way: light tensegrity column, quiet dark résumé, rótulo pintado, architecture-diagram sheet, component datasheet, engineering drawing sheet.
 
 ## Evidence on Hand
 
